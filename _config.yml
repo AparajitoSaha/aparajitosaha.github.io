@@ -11,10 +11,10 @@ locale                   : "en-US"
 title                    : "Aparajito Saha / Portfolio"
 title_separator          : "-"
 name                     : &name "Aparajito Saha"
-description              : &description "Full-stack roboticist. Occasional musician."
+description              : &description "Full-stack roboticist with occasional music and outdoor aspirations"
 url                      : https://aparajitosaha.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
-repository               : "AparajitoSaha/aparajito-saha.github.io"
+repository               : "AparajitoSaha/aparajitosaha.github.io"
 
 # Site Author - The following control what appear as part of the author content on the side bar.
 #               If a field is blank the icon and link will not appear, otherwise it will be shown.
@@ -24,7 +24,7 @@ author:
   avatar           : "IMG_0645.jpg"
   name             : "Aparajito Saha"
   pronouns         : # example: "she/her"  
-  bio              : "Full-stack roboticist. Occasional musician."
+  bio              : "Full-stack roboticist with occasional music and outdoor aspirations"
   location         : "Ann Arbor, MI"
   employer         : "University of Michigan"
   uri              : # URL
@@ -75,10 +75,14 @@ author:
 
 # Publication Category - The following the list of publication categories and their headings
 publication_category:
-  books:
-    title: 'Books'
-  manuscripts:
-    title: 'Journal Articles'    
+  # books:
+  #   title: 'Books'
+  # manuscripts:
+  #   title: 'Journal Articles'
+  preprints:
+    title: 'Preprints'
+  technical_reports:
+    title: 'Technical Reports'    
   conferences:
     title: 'Conference Papers'
 
