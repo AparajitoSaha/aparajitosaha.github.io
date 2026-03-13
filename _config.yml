@@ -11,7 +11,7 @@ locale                   : "en-US"
 title                    : "Aparajito Saha / Portfolio"
 title_separator          : "-"
 name                     : &name "Aparajito Saha"
-description              : &description "Full-stack roboticist with occasional music and outdoor aspirations"
+description              : &description "Ph.D. student, Robotics"
 url                      : https://aparajitosaha.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "AparajitoSaha/aparajitosaha.github.io"
@@ -21,10 +21,10 @@ repository               : "AparajitoSaha/aparajitosaha.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "IMG_0645.jpg"
+  avatar           : "Headshot.jpg"
   name             : "Aparajito Saha"
   pronouns         : # example: "she/her"  
-  bio              : "Full-stack roboticist with occasional music and outdoor aspirations"
+  bio              : ""
   location         : "Ann Arbor, MI"
   employer         : "University of Michigan"
   uri              : # URL
