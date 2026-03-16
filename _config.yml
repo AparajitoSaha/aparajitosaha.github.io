@@ -8,10 +8,10 @@
 
 # Basic Site Settings
 locale                   : "en-US"
-title                    : "Aparajito Saha / Portfolio"
+title                    : "Home"
 title_separator          : "-"
 name                     : &name "Aparajito Saha"
-description              : &description "Ph.D. student, Robotics"
+description              : &description "Ph.D. Student, Robotics"
 url                      : https://aparajitosaha.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "AparajitoSaha/aparajitosaha.github.io"
