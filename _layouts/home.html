@@ -1,0 +1,22 @@
+---
+layout: default
+---
+
+{% include base_path %}
+
+<div id="main" role="main">
+  {% include sidebar.html %}
+
+  <article class="page">
+    <div class="page__inner-wrap">
+      <section id="about" class="page__content home-section">
+        {% if page.title %}<h1 class="page__title">{{ page.title }}</h1>{% endif %}
+        {{ content }}
+      </section>
+
+      {% include home-section.html id="publications" title="Publications" collection=site.publications newest_first=true %}
+      {% include home-section.html id="projects" title="Projects" collection=site.portfolio %}
+      {% include home-section.html id="teaching" title="Teaching" collection=site.teaching newest_first=true %}
+    </div>
+  </article>
+</div>

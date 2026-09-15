@@ -1,0 +1,34 @@
+{% comment %}
+  One section of the single-page homepage, listing every item in a collection.
+  Params: id (anchor the nav bar links to), title, collection,
+  categories (optional; groups items under these headings, e.g. site.publication_category),
+  newest_first (optional).
+{% endcomment %}
+
+{% if include.newest_first %}
+  {% assign items = include.collection | reverse %}
+{% else %}
+  {% assign items = include.collection %}
+{% endif %}
+
+{% if items.size > 0 %}
+<section id="{{ include.id }}" class="page__content home-section">
+  <h2>{{ include.title }}</h2>
+
+  {% if include.categories %}
+    {% for category in include.categories %}
+      {% assign category_items = items | where: "category", category[0] %}
+      {% if category_items.size > 0 %}
+        <h3>{{ category[1].title }}</h3>
+        {% for post in category_items %}
+          {% include home-item.html heading="h4" %}
+        {% endfor %}
+      {% endif %}
+    {% endfor %}
+  {% else %}
+    {% for post in items %}
+      {% include home-item.html %}
+    {% endfor %}
+  {% endif %}
+</section>
+{% endif %}

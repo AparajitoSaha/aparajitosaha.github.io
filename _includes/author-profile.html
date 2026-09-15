@@ -24,6 +24,9 @@
     <button class="btn btn--inverse">Follow</button>
     <ul class="author__urls social-icons">
       <!-- Font Awesome icons / Biographic information  -->
+      {% if author.cv %}
+        <li><a href="{% if author.cv contains '://' %}{{ author.cv }}{% else %}{{ author.cv | prepend: base_path }}{% endif %}"><i class="fas fa-fw fa-file-pdf icon-pad-right" aria-hidden="true"></i>CV</a></li>
+      {% endif %}
       {% if author.location %}
         <li class="author__desktop"><i class="fa-solid fa-location-dot icon-pad-right" aria-hidden="true"></i>{{ author.location }}</li>
       {% endif %}

@@ -6,22 +6,19 @@
 
 main:
   - title: "Publications"
-    url: /publications/
+    url: /#publications
 
   # - title: "Talks"
-  #   url: /talks/    
+  #   url: /talks/
+
+  - title: "Projects"
+    url: /#projects
 
   - title: "Teaching"
-    url: /teaching/    
-    
-  - title: "Projects"
-    url: /portfolio/
-        
+    url: /#teaching
+
   # - title: "Blog Posts"
   #   url: /year-archive/
-    
-  - title: "CV"
-    url: /files/AparajitoSaha_CV.pdf
-    
+
   # - title: "Guide"
   #   url: /markdown/

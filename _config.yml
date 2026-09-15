@@ -8,7 +8,7 @@
 
 # Basic Site Settings
 locale                   : "en-US"
-title                    : "Home"
+title                    : "Aparajito Saha"
 title_separator          : "-"
 name                     : &name "Aparajito Saha"
 description              : &description "Ph.D. Student, Robotics"
@@ -25,10 +25,11 @@ author:
   name             : "Aparajito Saha"
   pronouns         : # example: "she/her"  
   bio              : ""
-  location         : "Ann Arbor, MI"
-  employer         : "University of Michigan"
+  location         : # left blank so it is hidden in the sidebar
+  employer         : # left blank so it is hidden in the sidebar
   uri              : # URL
-  email            : "rajsaha@umich.edu" 
+  email            : "rajsaha@umich.edu"
+  cv               : "/files/AparajitoSaha_CV.pdf" # site-relative path or full URL
 
   # Academic websites
   arxiv            : # URL - Update with the correct link to your profile
@@ -73,18 +74,9 @@ author:
   youtube          : # Username
   zhihu            : # Username
 
-# Publication Category - The following the list of publication categories and their headings
-publication_category:
-  # books:
-  #   title: 'Books'
-  # manuscripts:
-  #   title: 'Journal Articles'
-  preprints:
-    title: 'Preprints'
-  technical_reports:
-    title: 'Technical Reports'    
-  conferences:
-    title: 'Conference Papers'
+# Publication Category - not used: publications are listed without category
+# headings. To group them again, define categories here and pass them to the
+# publications section in _layouts/home.html (categories=site.publication_category).
 
 # Site Settings
 teaser                   :  # filename of teaser fallback teaser image placed in /images/, .e.g. "500x300.png"
@@ -214,15 +206,17 @@ kramdown:
 
 
 # These settings control the types of collections used by the template
+# Teaching, publications and portfolio are rendered inline on the homepage
+# (see _layouts/home.html), so they don't get pages of their own.
 collections:
   teaching:
-    output: true
+    output: false
     permalink: /:collection/:path/
   publications:
-    output: true
+    output: false
     permalink: /:collection/:path/
   portfolio:
-    output: true
+    output: false
     permalink: /:collection/:path/
   talks:
     output: true
@@ -304,6 +298,7 @@ plugins:
   - jekyll-feed
   - jekyll-gist
   - jekyll-paginate
+  - jekyll-redirect-from
   - jekyll-sitemap
   - jemoji
 
@@ -312,6 +307,7 @@ whitelist:
   - jekyll-feed
   - jekyll-gist
   - jekyll-paginate
+  - jekyll-redirect-from
   - jekyll-sitemap
   - jemoji
 

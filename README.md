@@ -30,8 +30,9 @@ When you are initially working your website, it is very useful to be able to pre
     brew install node
     gem install bundler
     ```
+1. Run `bundle config set --local path 'vendor/bundle'` to install gems into a project-local folder. This avoids `Bundler::PermissionError` writing to the system gem path (`/var/lib/gems/...`) on systems where you can't write there.
 1. Run `bundle install` to install ruby dependencies. If you get errors, delete Gemfile.lock and try again.
-1. Run `jekyll serve -l -H localhost` to generate the HTML and serve it from `localhost:4000` the local server will automatically rebuild and refresh the pages on change.
+1. Run `bundle exec jekyll serve -l -H localhost` to generate the HTML and serve it from `localhost:4000` the local server will automatically rebuild and refresh the pages on change.
 
 If you are running on Linux it may be necessary to install some additional dependencies prior to being able to run locally: `sudo apt install build-essential gcc make`
 
@@ -94,8 +95,9 @@ When you are initially working your website, it is very useful to be able to pre
     brew install node
     gem install bundler
     ```
+1. Run `bundle config set --local path 'vendor/bundle'` to install gems into a project-local folder. This avoids `Bundler::PermissionError` writing to the system gem path (`/var/lib/gems/...`) on systems where you can't write there.
 1. Run `bundle install` to install ruby dependencies. If you get errors, delete Gemfile.lock and try again.
-1. Run `jekyll serve -l -H localhost` to generate the HTML and serve it from `localhost:4000` the local server will automatically rebuild and refresh the pages on change.
+1. Run `bundle exec jekyll serve -l -H localhost` to generate the HTML and serve it from `localhost:4000` the local server will automatically rebuild and refresh the pages on change.
 
 If you are running on Linux it may be necessary to install some additional dependencies prior to being able to run locally: `sudo apt install build-essential gcc make`
 

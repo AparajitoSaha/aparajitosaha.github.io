@@ -8,7 +8,7 @@ date: 2025-08-01
 location: "Ann Arbor, Michigan, USA"
 ---
 
-EECS 442 is an introductory course in computer vision, covering topics such as low-level vision, 2D signal processing, object recognition, image synthesis, 3D reconstruction, and deep learning. As a Graduate Student Instructor, I was responsible for leading recitation sections, creating and grading assignments, and providing office hours support.
+EECS 442 is an introductory course in computer vision, covering topics such as low-level vision, 2D signal processing, object recognition, image synthesis, 3D reconstruction, and deep learning.
 
 Teaching Materials
 ======

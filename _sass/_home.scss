@@ -1,0 +1,106 @@
+/* ==========================================================================
+   HOME (single-page layout)
+   ========================================================================== */
+
+/* Sizes are set explicitly rather than left to the heading level, so the
+   hierarchy holds wherever an item sits: section 25px > item title 16px bold
+   > body 16px. */
+
+.home-section {
+  margin-bottom: 2em;
+  /* keep section headings clear of the fixed masthead when loading /#anchor */
+  scroll-margin-top: calc(#{$masthead-height} + 1em);
+
+  /* section heading, e.g. "Publications" */
+  h2 {
+    font-size: $type-size-3;
+  }
+
+  /* optional grouping heading within a section */
+  h3 {
+    margin: 1.5em 0 0.5em;
+    font-size: $type-size-4;
+  }
+}
+
+.home-item {
+  margin-bottom: 1.5em;
+
+  p {
+    margin-bottom: 0.5em;
+  }
+}
+
+/* small venue headline sitting above a publication title */
+.home-item__eyebrow {
+  margin: 1.5em 0 0.25em;
+  font-size: $type-size-7;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: $dark-gray;
+}
+
+.home-item__title {
+  margin: 1.25em 0 0.25em;
+  font-size: $type-size-5;
+
+  .home-item__eyebrow + & {
+    margin-top: 0;
+  }
+}
+
+.home-item__authors {
+  font-size: $type-size-6;
+}
+
+/* subheadings inside an item's Markdown body, e.g. "Teaching Materials" */
+.home-item__body {
+  h4, h5, h6 {
+    margin: 1.5em 0 0.5em;
+    font-size: $type-size-6;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: $dark-gray;
+  }
+}
+
+.home-item__citation {
+  font-size: $type-size-6;
+}
+
+/* link buttons under an entry: Website, Code, PDF */
+.home-item__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 0.75em;
+}
+
+/* selectors are doubled up to outrank the theme's underlined .page__content a */
+.home-item__links .home-item__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 10px;
+  border: 1px solid $light-gray;
+  border-radius: 8px;
+  font-size: $type-size-7;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: $text-color;
+  text-decoration: none;
+  transition: $global-transition;
+
+  svg {
+    width: 12px;
+    height: 12px;
+  }
+
+  &:hover,
+  &:focus {
+    color: #fff;
+    background-color: $text-color;
+    border-color: $text-color;
+    text-decoration: none;
+  }
+}
