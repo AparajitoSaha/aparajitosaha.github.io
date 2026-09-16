@@ -76,7 +76,7 @@ body::before {
           backdrop-filter: blur(10px);
   border-bottom: 1px solid $rule;
 
-  /* a midcentury colour bar along the top edge */
+  /* a solid colour bar along the top edge */
   &::before {
     content: "";
     position: absolute;
@@ -84,7 +84,7 @@ body::before {
     right: 0;
     left: 0;
     height: 4px;
-    background: linear-gradient(to right, $teal 0, $teal 72%, $ochre 72%, $ochre 88%, $sienna 88%, $sienna 100%);
+    background: $petrol;
   }
 }
 
@@ -150,8 +150,12 @@ body::before {
   }
 }
 
-.author__name {
+/* name in bold capitals, at the size of the section headings */
+.sidebar .author__name {
   color: $ink;
+  font-size: $type-size-4;
+  font-weight: bold;
+  // text-transform: uppercase;
 }
 
 .author__urls {
@@ -193,7 +197,11 @@ body::before {
   background-color: $teal-deep;
 }
 
-/* the "Follow" toggle on narrow screens; the theme marks these !important */
+/* the "Contact Me" toggle on narrow screens; the theme marks these !important */
+.author__urls-wrapper .btn--inverse {
+  white-space: nowrap;
+}
+
 .btn--inverse {
   color: $teal !important;
   border: 1px solid $rule !important;

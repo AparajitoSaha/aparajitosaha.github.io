@@ -95,8 +95,12 @@
 }
 
 .home-item .home-item__authors {
-  font-size: $type-size-6;
+  font-size: 0.85em;
   color: $ink-soft;
+
+  strong {
+    color: $ink;
+  }
 }
 
 /* subheadings inside an item's Markdown body, e.g. "Teaching Materials" */
