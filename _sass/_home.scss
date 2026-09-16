@@ -3,54 +3,100 @@
    ========================================================================== */
 
 /* Sizes are set explicitly rather than left to the heading level, so the
-   hierarchy holds wherever an item sits: section 25px > item title 16px bold
-   > body 16px. */
+   hierarchy holds wherever an item sits: section heading > item title > body. */
 
 .home-section {
-  margin-bottom: 2em;
+  margin-bottom: 1.5em;
   /* keep section headings clear of the fixed masthead when loading /#anchor */
   scroll-margin-top: calc(#{$masthead-height} + 1em);
 
-  /* section heading, e.g. "Publications" */
+  /* section heading, e.g. "Publications": letterspaced capitals to match the
+     nav, led by a midcentury pair of overlapping dots (teal over an ochre
+     shadow). Capitals read larger than mixed case, so the size steps down one
+     notch; the dots and top margin are scaled up to keep their pixel size. */
   h2 {
-    font-size: $type-size-3;
+    display: flex;
+    align-items: center;
+    margin-top: 2em;
+    font-size: $type-size-4;
+    font-weight: 400;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+
+    &::before {
+      content: "";
+      flex-shrink: 0;
+      width: 0.55em;
+      height: 0.55em;
+      margin-right: 1em;
+      border-radius: 50%;
+      background: $teal;
+      box-shadow: 0.36em 0 0 $ochre;
+    }
   }
 
-  /* optional grouping heading within a section */
-  h3 {
+  /* optional grouping heading within a section (a direct child, unlike item
+     titles, which sit inside .home-item) */
+  > h3 {
     margin: 1.5em 0 0.5em;
     font-size: $type-size-4;
   }
 }
 
 .home-item {
-  margin-bottom: 1.5em;
+  margin-bottom: 1.75em;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 
   p {
     margin-bottom: 0.5em;
   }
 }
 
+/* The paragraph classes below are written as .home-item .home-item__x so they
+   outrank the theme's .page__content p, which otherwise resets their font-size
+   and margins. */
+
 /* small venue headline sitting above a publication title */
-.home-item__eyebrow {
-  margin: 1.5em 0 0.25em;
-  font-size: $type-size-7;
-  letter-spacing: 0.05em;
+.home-item .home-item__eyebrow {
+  margin: 2.5em 0 0.3em;
+  font-size: $type-size-6;
+  letter-spacing: 0.1em;
+  line-height: 1.6;
   text-transform: uppercase;
-  color: $dark-gray;
+  color: $teal;
 }
 
 .home-item__title {
-  margin: 1.25em 0 0.25em;
-  font-size: $type-size-5;
+  margin: 1.5em 0 0.35em;
+  font-size: 1.15em;
+  line-height: 1.4;
 
   .home-item__eyebrow + & {
     margin-top: 0;
   }
+
+  a {
+    color: $ink;
+    text-decoration-color: rgba($teal, 0.5);
+
+    &:hover {
+      color: $teal;
+      text-decoration-color: $teal;
+    }
+  }
 }
 
-.home-item__authors {
+/* role and institution under a teaching title */
+.home-item__meta {
+  color: $ink-soft;
+}
+
+.home-item .home-item__authors {
   font-size: $type-size-6;
+  color: $ink-soft;
 }
 
 /* subheadings inside an item's Markdown body, e.g. "Teaching Materials" */
@@ -58,36 +104,38 @@
   h4, h5, h6 {
     margin: 1.5em 0 0.5em;
     font-size: $type-size-6;
+    letter-spacing: 0.14em;
     text-transform: uppercase;
-    letter-spacing: 0.05em;
-    color: $dark-gray;
+    color: $ink-soft;
   }
 }
 
-.home-item__citation {
+.home-item .home-item__citation {
   font-size: $type-size-6;
 }
 
 /* link buttons under an entry: Website, Code, PDF */
-.home-item__links {
+.home-item .home-item__links {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
-  margin-top: 0.75em;
+  margin-top: 0.85em;
 }
 
 /* selectors are doubled up to outrank the theme's underlined .page__content a */
 .home-item__links .home-item__link {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
-  padding: 5px 10px;
-  border: 1px solid $light-gray;
-  border-radius: 8px;
+  gap: 7px;
+  padding: 5px 13px 4px;
+  border: 1px solid rgba($teal, 0.55);
+  border-radius: 999px;
   font-size: $type-size-7;
-  letter-spacing: 0.03em;
+  letter-spacing: 0.12em;
+  line-height: 1.6;
   text-transform: uppercase;
-  color: $text-color;
+  color: $teal;
+  background-color: rgba($paper, 0.7);
   text-decoration: none;
   transition: $global-transition;
 
@@ -98,9 +146,9 @@
 
   &:hover,
   &:focus {
-    color: #fff;
-    background-color: $text-color;
-    border-color: $text-color;
+    color: $paper;
+    background-color: $teal;
+    border-color: $teal;
     text-decoration: none;
   }
 }

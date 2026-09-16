@@ -51,7 +51,9 @@ function updateNav() {
   // Keep counter updated
   $btn.attr("count", breaks.length);
 
-  // Recur if the visible list is still overflowing the nav
+  // Recur if the visible list is still overflowing the nav. Measure the space
+  // again: if the dropdown button was just revealed, it now takes up room.
+  availableSpace = $btn.hasClass('hidden') ? $nav.width() : $nav.width() - $btn.width() - 30;
   if($vlinks.width() > availableSpace) {
     updateNav();
   }

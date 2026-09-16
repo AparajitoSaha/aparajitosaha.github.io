@@ -1,3 +1,16 @@
 <script src="{{ base_path }}/assets/js/main.min.js"></script>
+<script>
+  // The nav decides which links fit as the page loads, but Libre Baskerville
+  // sets wider than the fallback font, so check again once it has loaded.
+  // document.fonts.ready alone can resolve before the font starts downloading.
+  (function () {
+    function remeasure() { window.dispatchEvent(new Event("resize")); }
+    if (document.fonts && document.fonts.load) {
+      document.fonts.load('400 1em "Libre Baskerville"').then(remeasure);
+      document.fonts.load('700 1em "Libre Baskerville"').then(remeasure);
+    }
+    window.addEventListener("load", remeasure);
+  })();
+</script>
 
 {% include analytics.html %}
