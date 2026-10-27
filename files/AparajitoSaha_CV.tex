@@ -1,0 +1,221 @@
+% Document class and font size
+\documentclass[a4paper,9pt]{extarticle}
+
+% Packages
+\usepackage[utf8]{inputenc} % For input encoding
+\usepackage{geometry} % For page margins
+\geometry{letterpaper, margin=0.75in} % Set paper size and margins
+\usepackage{titlesec} % For section title formatting
+\usepackage{enumitem} % For itemized list formatting
+\usepackage{hyperref} % For hyperlinks
+\usepackage{tabularx}
+\usepackage{fancyhdr}
+\usepackage{xcolor} % Custom colors for section headers etc.
+
+% Formatting
+\definecolor{headertheme}{HTML}{004958} % Change this hex value for different colors
+\setlist{noitemsep} % Removes item separation
+\titleformat{\section}{\large\bfseries\color{headertheme}}{\thesection}{1em}{}[{\color{headertheme}\titlerule}] % Section title format
+\titlespacing*{\section}{0pt}{\baselineskip}{\baselineskip} % Section title spacing
+%%%%%%%%%%
+
+% Begin document
+\begin{document}
+
+% Disable page numbers
+\pagestyle{fancy}
+\renewcommand{\headrulewidth}{0pt}
+\fancyhead{}
+\fancyhead[L]{\textit{Aparajito Saha}}
+\fancyhead[R]{\textit{Ph.D. Student, Robotics}}
+\thispagestyle{empty} % Remove header from the first page
+
+% Header
+\begin{center}
+\textbf{\Huge APARAJITO SAHA}\\[3pt] % Name
+ \href{mailto:rajsaha@umich.edu}{rajsaha@umich.edu} | \href{https://www.linkedin.com/in/aparajitosaha}{LinkedIn} | \href{https://aparajitosaha.github.io}{Website} % Contact info
+ % Portfolio
+\end{center}
+
+% Research Interests Section
+\section*{RESEARCH INTERESTS}
+\noindent
+Interactive perception, scene understanding, embodied search, instruction-following mobile manipulation
+
+% Education Section
+\section*{EDUCATION}
+\noindent
+\textbf{Ph.D. Robotics}, University of Michigan, Ann Arbor \hfill   \textit{Ann Arbor, MI, USA} \\ % University name and location
+\textbf{Advisor:} Dr. Bernadette Bucher \hfill \textit{Aug 2026 | Exp. May 2030} \\ % Degree and GPA
+
+\noindent
+\textbf{M.S. Robotics}, University of Michigan, Ann Arbor \hfill   \textit{Ann Arbor, MI, USA} \\ % University name and location
+\textbf{Cumulative GPA:} 4.00/4.00 \hfill \textit{Aug 2024 | May 2026} \\ % Degree and GPA
+
+\noindent
+\textbf{B.S. Electrical \& Computer Engineering + Computer Science}, Cornell University \hfill   \textit{Ithaca, NY, USA} \\ % University name and location
+\textbf{Cumulative GPA (double major):} 3.74/4.00 \hfill \textit{Aug 2018 | May 2022}  % Degree and GPA
+
+% Experience Section
+\section*{RESEARCH EXPERIENCE}
+\noindent
+\textbf{Graduate Student Research Assistant}, Mapping \& Motion Lab \hfill \textit{University of Michigan} \\ % Company name and location
+\textbf{Principal Investigator:} Dr. Bernadette Bucher \hfill \textit{Dec 2024 | Present} % Position and duration
+\begin{itemize}
+    \item Formulated the \textit{interactive object search} problem, in which a mobile manipulator must reason about necessary physical interactions with an unexplored indoor environment to eliminate occlusions, identify visual affordances and locate semantically-defined target objects
+    \item Designed a robotic task benchmark for the interactive object search problem to evaluate geometric and semantic reasoning for high-level planning alongside fine-grained control capabilities for mobile manipulator systems (\hyperlink{forage}{\textbf{P1}})
+    \item Led implementation efforts for a photorealistic, physics-driven extension on Nvidia's IsaacSim platform that leverages procedural generation and 3D asset population for creating multi-room indoor scenes for interactive object search (\hyperlink{phygs}{\textbf{W1}})
+    \item Advised a team of graduate and undergraduate students for deploying state-of-the-art perception and manipulation systems such as MASt3R-SLAM, RoboPoint and AnyGrasp on a Boston Dynamics Spot robot, with the objective of producing an open-source software stack for instruction-following mobile manipulation
+    % \item Developed a method to add object-map alignment to visual-semantic frontier mapping, providing robust localization and open-set object goal navigation capabilities
+    % Job responsibilities and achievements
+\end{itemize}
+
+\noindent
+\textbf{Undergraduate Research Assistant}, EmPRISE Lab \hfill \textit{Cornell University} \\ % Company name and location
+\textbf{Principal Investigator:} Dr. Tapomayukh Bhattacharjee \hfill \textit{Aug 2021 | May 2022} % Position and duration
+\begin{itemize}
+    \item Engineered a prototype circuit board for managing real-time communication of tactile feedback from a whole-arm fabric skin sensor system, earning an acknowledgment for the contribution in B. Xu et. al. ``CushSense: Soft, Stretchable, and Comfortable Tactile Sensing Skin for Physical Human-Robot Interaction" \textit{International Conference on Robotics \& Automation, 2024} 
+    % Job responsibilities and achievements
+\end{itemize}
+
+% Experience Section
+\section*{PROFESSIONAL EXPERIENCE}
+\noindent
+\textbf{Visiting Scientist}, General Motors Research and Development \hfill \textit{Warren, MI, USA}\\ % Company name and location
+\textbf{Manager:} Dr. Guangze Li  \hfill \textit{May 2026 | Sept 2026} % Position and duration
+\begin{itemize}
+    \item Designed learning-based approaches for autonomous depackaging and warehouse inbound induction using bimanual manipulators
+\end{itemize}
+
+\noindent
+\textbf{Software Development Engineer}, Amazon Fulfillment Technologies \& Robotics \hfill \textit{North Reading, MA, USA}\\ % Company name and location
+\textbf{Manager:} Todd Clemetson  \hfill \textit{Jul 2022 | Aug 2024} % Position and duration
+\begin{itemize}
+    \item Designed autonomous robotic movement solutions deployed to over 1 million mobile robotic drive units in Amazon's global warehouse network
+    \item Led a zero-downtime serverless rearchitecture and migration effort for a critical production service responsible for computing and updating unavailable resources on warehouse floors 
+    \item Contributed to algorithms for storage and retrieval optimization used in Amazon's new Sequoia fulfillment centers, reducing delivery miss rates
+    \item Developed a continuous improvement and deployment pipeline framework for the robotic movement team, leading to a 2 hour reduction in downtime and maintenance per service per week across 8 Tier-1 and Tier-2 services
+    \item Participated in on-call rotations to resolve high-severity events, mentored interns and new engineers on engineering practices and projects, and held open office hours for operations managers to troubleshoot floor issues
+    % Job responsibilities and achievements
+\end{itemize}
+
+\newpage
+
+\section*{PUBLICATIONS}
+\noindent
+\textbf{Preprints}
+\begin{itemize}
+    \item [\textbf{P1}] \hypertarget{forage}{} \textbf{Aparajito Saha,} Zhen Hao Gan, Jinjia Guo, Jacob Skwirsk, Jeremy Acheampong, Anton Arapin, Chahyon Ku, Yue Hu, Nima Fazeli, Bernadette Bucher. \textit{ForageBench: A Photorealistic, Physically Grounded Benchmark for Interactive Object Search}. In Submission. \href{https://m-and-m-lab.github.io/ForageBench/}{Project Website.}
+\end{itemize} 
+
+\noindent
+\textbf{Workshop Submissions}
+\begin{itemize}
+    \item [\textbf{W1}] \hypertarget{phygs}{} \textbf{Aparajito Saha,} Zhen Hao Gan, Jinjia Guo, Jacob Skwirsk, Jeremy Acheampong, Anton Arapin, Chahyon Ku, Yue Hu, Nima Fazeli, Bernadette Bucher. \textit{PhyGS: Physically-Grounded Controllable Scene Generation}. Workshop on Multi-Agent Embodied Intelligent Systems, \textbf{CVPR} 2026. \href{https://m-and-m-lab.github.io/PhyGS/}{Project Website.}
+\end{itemize} 
+
+\noindent
+\textbf{Technical Reports}
+\begin{itemize}
+    \item [\textbf{TR1}] \label{itm:aroundsound} \textbf{Aparajito Saha}*, Amulya Khurana*, Krithik Ranjan*. \textit{AroundSound: Digital Echolocation for the Visually Impaired}. CircuitCellar Issue 386, Sept. 2022. \textit{\small(* denotes equal contribution)}
+\end{itemize}
+
+% Experience Section
+\section*{TEACHING}
+\noindent
+\textbf{Graduate Student Instructor}, University of Michigan, Ann Arbor \hfill \textit{Ann Arbor, MI, USA}\\ % Company name and location
+\textbf{EECS 442:} Computer Vision \textit{(240 students/ semester)} \hfill \textit{Aug 2025 | Dec 2025} % Position and duration
+
+\noindent \\
+\textbf{Teaching Assistant}, Cornell University \hfill \textit{Ithaca, NY, USA}\\ % Company name and location
+\textbf{ECE 5725:} Design with Embedded Operating Systems \textit{(80 students/ semester)} \hfill \textit{Aug 2021 | May 2022} % Position and duration
+
+\noindent \\
+\textbf{Peer Advisor}, Cornell University \hfill \textit{Ithaca, NY, USA}\\ % Company name and location
+\textbf{ENGRG 1050:} Engineering Seminar \textit{(25 students/ semester)} \hfill \textit{Aug 2021 | May 2022} % Position and duration
+
+% Experience Section
+\section*{HONORS \& GRANTS}
+\noindent
+\textbf{Robotics Department Fellowship}, University of Michigan, Ann Arbor \hfill \textit{2026 | 2027} % Company name and location
+
+\noindent
+\textbf{U-M Library Student Mini-Grant}, University of Michigan, Ann Arbor \hfill 2026
+
+\noindent
+\textbf{Best Poster Presentation}, University of Michigan Robotics Symposium \hfill \textit{2026}
+
+\noindent
+\textbf{Bachelor of Science, Cum Laude}, Cornell University \hfill \textit{2022} % Company name and location
+
+\noindent
+\textbf{Departmental Honors in Computer Science}, Cornell University \hfill \textit{2022} % Company name and location
+
+\noindent 
+\textbf{Dean's List (Engineering)}, Cornell University \hfill \textit{2018 | 2022} % Company name and location
+
+\section*{ACADEMIC SERVICE}
+\noindent
+\textbf{Peer Reviewer} - Conference on Robot Learning (CoRL), International Conference on Robotics \& Automation (ICRA)
+% \noindent
+% \textbf{Workshop Organizer} - CoRL 2026 Physical AI in Manufacturing 
+
+\section*{MENTORSHIP}
+\noindent
+\textbf{University of Michigan, Ann Arbor}
+\begin{itemize} 
+    \item Jinjia Guo, M.S. Robotics  \hfill \textit{Sept 2025 | Dec 2025}
+    \item Kornvik Tanpipat, M.S. Robotics  \hfill \textit{Sept 2025 | Dec 2025}
+    \item Saumit Vedula, M.S. Robotics  \hfill \textit{Sept 2025 | Dec 2025}
+    \item Aileen Yan, M.S. Electrical \& Computer Engineering  \hfill \textit{Sept 2025 | Dec 2025}
+    \item Chenrui Gao, B.S. Computer Science \& Engineering  \hfill \textit{Sept 2025 | Dec 2025}
+    \item Georgia Zender, B.S. Computer Science \& Engineering \hfill \textit{Feb 2025 | May 2025}
+\end{itemize}
+\noindent
+\textbf{Amazon Fulfillment Technologies \& Robotics}
+\begin{itemize}
+    \item Hemant Palavali, Software Development Engineer \hfill \textit{December 2023 | March 2024}
+\end{itemize}
+\noindent
+\textbf{Cornell University}
+\begin{itemize}
+    \item Cornell Cup Robotics Team (20+ students) \hfill \textit{Aug 2021 | May 2022}
+\end{itemize}
+
+
+% Skills Section
+\section*{SKILLS}
+\textbf{Programming Languages:} Python, C++, Java, MATLAB 
+
+\noindent
+\textbf{Software:} IsaacLab, PyTorch, ROS2, Slurm, Git, Docker, AWS Lambda, AWS DynamoDB
+
+\noindent 
+\textbf{Hardware:} NVIDIA Jetson, Raspberry Pi, Rapid Prototyping (3D Printing, Soldering, Circuit Board Design)
+
+% \section*{REFERENCES}
+% \textbf{Prof. Bernadette Bucher}\\
+% \textit{Assistant Professor, Robotics, University of Michigan, Ann Arbor, MI, USA}\\
+% E-mail: \href{mailto:bucherb@umich.edu}{bucherb@umich.edu}
+
+% \noindent \\
+% \textbf{Prof. Dimitra Panagou}\\
+% \textit{Associate Professor, Robotics, University of Michigan, Ann Arbor, MI, USA}\\
+% E-mail: \href{mailto:dpanagou@umich.edu}{dpanagou@umich.edu}
+
+% \noindent \\
+% \textbf{Todd Clemetson}\\
+% \textit{Software Development Manager, Amazon Fulfillment Technologies and Robotics, North Reading, MA, USA}\\
+% E-mail: \href{mailto:tclemet@amazon.com}{tclemet@amazon.com} 
+
+% \noindent \\
+% \textbf{Prof. Tapomayukh Bhattacharjee}\\
+% \textit{Assistant Professor, Computer Science, Cornell University, Ithaca, NY, USA}\\
+% E-mail: \href{mailto:tapomayukh@cornell.edu}{tapomayukh@cornell.edu} 
+
+% \noindent \\
+% \textbf{Prof. Joseph Skovira}\\
+% \textit{Professor of Practice, Electrical \& Computer Engineering, Cornell University, Ithaca, NY, USA}\\
+% E-mail: \href{mailto:jfs9@cornell.edu}{jfs9@cornell.edu}
+% End document
+\end{document}
